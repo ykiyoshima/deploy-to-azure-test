@@ -99,6 +99,7 @@
         "type": "SystemAssigned"
       },
       "properties": {
+        "reserved": true,
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
         "siteConfig": {
           "appSettings": [
