@@ -87,7 +87,9 @@
         "tier": "Dynamic"
       },
       "kind": "linux",
-      "properties": {}
+      "properties": {
+        "reserved": true
+      }
     },
     {
       "type": "Microsoft.Web/sites",
@@ -99,7 +101,6 @@
         "type": "SystemAssigned"
       },
       "properties": {
-        "reserved": true,
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
         "siteConfig": {
           "appSettings": [
