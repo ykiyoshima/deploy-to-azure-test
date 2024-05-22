@@ -78,6 +78,7 @@
         "name": "Y1",
         "tier": "Dynamic"
       },
+      "kind": "linux",
       "properties": {}
     },
     {
