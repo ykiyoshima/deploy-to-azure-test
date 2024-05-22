@@ -49,7 +49,7 @@
     },
     "linuxFxVersion": {
       "type": "string",
-      "defaultValue": "DOTNETCORE|6.0",
+      "defaultValue": "DOTNET|6.0",
       "metadata": {
         "description": "Required for Linux app to represent runtime stack in the format of 'runtime|runtimeVersion'. For example: 'python|3.9'"
       }
