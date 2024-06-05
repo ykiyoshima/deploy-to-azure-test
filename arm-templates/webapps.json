@@ -37,13 +37,6 @@
       "metadata": {
         "description": "The Runtime stack of current web app"
       }
-    },
-    "repoUrl": {
-      "type": "string",
-      "defaultValue": " ",
-      "metadata": {
-        "description": "Optional Git Repo URL"
-      }
     }
   },
   "variables": {
@@ -82,20 +75,6 @@
       },
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanPortalName'))]"
-      ]
-    },
-    {
-      "condition": "[contains(parameters('repoUrl'), 'http')]",
-      "type": "Microsoft.Web/sites/sourcecontrols",
-      "apiVersion": "2021-02-01",
-      "name": "[format('{0}/{1}', parameters('webAppName'), 'web')]",
-      "properties": {
-        "repoUrl": "[parameters('repoUrl')]",
-        "branch": "master",
-        "isManualIntegration": true
-      },
-      "dependsOn": [
-        "[resourceId('Microsoft.Web/sites', parameters('webAppName'))]"
       ]
     }
   ]
